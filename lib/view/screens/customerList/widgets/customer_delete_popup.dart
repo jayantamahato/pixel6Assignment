@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pp/controller/customer_controller.dart';
 
+import '../../../../controller/customer_controller.dart';
 import '../../../../core/exports.dart';
 import '../../../../uiHelper/exports.dart';
 
@@ -16,7 +16,9 @@ AlertDialog confirmCustomerDeletePopUp(
           if (res) {
             await customerController.getCustomers();
           }
-          Navigator.of(context).pop();
+          if (context.mounted) {
+            Navigator.of(context).pop();
+          }
         },
         child: Text(
           AppString.yes,

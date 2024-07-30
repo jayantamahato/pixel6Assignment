@@ -4,7 +4,7 @@ class AppString {
 
   //screens name
   static String customer = 'Customer';
-  static String updateCustomer = 'Update Customer';
+  static String address = 'Address';
   static String customerList = 'Customers';
 
   //onboarding screen
@@ -12,10 +12,12 @@ class AppString {
 
   //button name
   static String save = 'Save';
-  static String edit = 'Update';
+  static String edit = 'Edit';
+  static String delete = 'Delete';
   static String next = 'Next';
   static String update = 'Update';
   static String addNewAddress = 'Add New Address';
+  static String addNewCustomer = 'Add Customer';
   //input labels
   static String fullName = 'Full Name*';
   static String phone = 'Mobile*';

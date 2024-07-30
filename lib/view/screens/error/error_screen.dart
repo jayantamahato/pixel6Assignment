@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pp/uiHelper/exports.dart';
-import 'package:pp/view/screens/onBoarding/onBoarding.dart';
-import 'package:pp/view/widgets/app_button.dart';
+
+import '../../../uiHelper/exports.dart';
+import '../../widgets/app_button.dart';
+import '../onBoarding/on_boarding.dart';
 
 class ErrorScreen extends StatelessWidget {
   static String routeName = '/error';

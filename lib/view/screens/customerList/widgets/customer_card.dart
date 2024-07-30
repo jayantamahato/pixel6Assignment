@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pp/view/screens/address/address.dart';
-import 'package:pp/view/screens/customer/customer.dart';
 
 import '../../../../controller/customer_controller.dart';
 import '../../../../core/exports.dart';
 import '../../../../uiHelper/exports.dart';
 import '../../../widgets/address_card.dart';
+import '../../address/address.dart';
+import '../../customer/customer.dart';
 import 'customer_delete_popup.dart';
 
 class CustomerCard extends StatelessWidget {
@@ -142,7 +142,7 @@ class CustomerCard extends StatelessWidget {
                   style: ButtonStyle(
                       foregroundColor:
                           WidgetStatePropertyAll(AppColor.primary)),
-                  child: const Text('Edit'),
+                  child: Text(AppString.edit),
                   onPressed: () {
                     controller.editCustomer(index: customerIndex);
                     Get.toNamed(CustomerScreen.routeName,
@@ -153,7 +153,7 @@ class CustomerCard extends StatelessWidget {
                 TextButton(
                   style: ButtonStyle(
                       foregroundColor: WidgetStatePropertyAll(AppColor.error)),
-                  child: const Text('Delete'),
+                  child: Text(AppString.delete),
                   onPressed: () {
                     showAdaptiveDialog(
                       context: context,

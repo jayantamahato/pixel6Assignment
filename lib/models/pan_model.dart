@@ -8,8 +8,8 @@ class PanModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['panNumber'] = this.panNumber;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['panNumber'] = panNumber;
     return data;
   }
 }

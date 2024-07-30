@@ -15,27 +15,27 @@ class PostalResModel {
     if (json['city'] != null) {
       city = <City>[];
       json['city'].forEach((v) {
-        city!.add(new City.fromJson(v));
+        city!.add(City.fromJson(v));
       });
     }
     if (json['state'] != null) {
       state = <State>[];
       json['state'].forEach((v) {
-        state!.add(new State.fromJson(v));
+        state!.add(State.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['statusCode'] = this.statusCode;
-    data['postcode'] = this.postcode;
-    if (this.city != null) {
-      data['city'] = this.city!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['statusCode'] = statusCode;
+    data['postcode'] = postcode;
+    if (city != null) {
+      data['city'] = city!.map((v) => v.toJson()).toList();
     }
-    if (this.state != null) {
-      data['state'] = this.state!.map((v) => v.toJson()).toList();
+    if (state != null) {
+      data['state'] = state!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -53,9 +53,9 @@ class City {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
     return data;
   }
 }
@@ -72,9 +72,9 @@ class State {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
     return data;
   }
 }

@@ -8,8 +8,8 @@ class PostalModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['postcode'] = this.postcode;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['postcode'] = postcode;
     return data;
   }
 }

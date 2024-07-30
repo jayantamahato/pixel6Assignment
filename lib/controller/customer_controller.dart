@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pp/view/screens/error/error_screen.dart';
 import '../core/exports.dart';
 import '../models/address_model.dart';
 import '../models/customer_model.dart';
@@ -8,6 +7,7 @@ import '../models/pan_model.dart';
 import '../models/pan_res_model.dart';
 import '../models/postal_model.dart';
 import '../models/postal_res_model.dart';
+import '../view/screens/error/error_screen.dart';
 
 class CustomerController extends GetxController {
   //field controller
@@ -40,7 +40,7 @@ class CustomerController extends GetxController {
 //get customers from local
   Future getCustomers() async {
     try {
-      List? data = await _databaseService.getCustomers();
+      List? data = _databaseService.getCustomers();
       if (data == null) {
         customerList.clear();
       } else {

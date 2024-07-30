@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pp/core/exports.dart';
-import 'package:pp/view/screens/customer/customer.dart';
-import 'package:pp/view/screens/customerList/widgets/customer_card.dart';
 
 import '../../../controller/customer_controller.dart';
+import '../../../core/exports.dart';
 import '../../../uiHelper/exports.dart';
-import '../../widgets/address_card.dart';
+import '../customer/customer.dart';
+import 'widgets/customer_card.dart';
 
 class CustomersScreen extends StatefulWidget {
   static String routeName = '/list';
-  CustomersScreen({super.key});
+  const CustomersScreen({super.key});
 
   @override
   State<CustomersScreen> createState() => _CustomersScreenState();
@@ -28,7 +27,7 @@ class _CustomersScreenState extends State<CustomersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Customers'),
+        title: Text(AppString.customerList),
       ),
       body: Obx(
         () => SizedBox(
@@ -74,7 +73,7 @@ class _CustomersScreenState extends State<CustomersScreen> {
           Get.toNamed(CustomerScreen.routeName);
         },
         icon: const Icon(Icons.add),
-        label: const Text('Add Customer'),
+        label: Text(AppString.addNewCustomer),
       ),
     );
   }

@@ -6,7 +6,6 @@ import '../../../core/exports.dart';
 import '../../../uiHelper/exports.dart';
 import '../../widgets/address_card.dart';
 import '../../widgets/app_button.dart';
-import '../../widgets/snac_bar.dart';
 import 'widgets/city_selector.dart';
 import '../../widgets/input.dart';
 import 'widgets/state_selector.dart';
@@ -16,7 +15,7 @@ import '../customerList/customer_list.dart';
 class AddressScreen extends StatefulWidget {
   static const String routeName = '/address';
 
-  AddressScreen({super.key});
+  const AddressScreen({super.key});
 
   @override
   State<AddressScreen> createState() => _AddressScreenState();
@@ -42,7 +41,7 @@ class _AddressScreenState extends State<AddressScreen> {
     return Obx(
       () => Scaffold(
         appBar: AppBar(
-          title: const Text('Address'),
+          title: Text(AppString.address),
         ),
         body: SingleChildScrollView(
           child: Form(
