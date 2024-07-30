@@ -119,7 +119,7 @@ class _AddressScreenState extends State<AddressScreen> {
                   decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.light
                         ? AppColor.white
-                        : AppColor.black,
+                        : AppColor.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(

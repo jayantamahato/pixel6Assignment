@@ -35,7 +35,7 @@ class CustomerCard extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
-        color: isDarkMode ? AppColor.black : AppColor.white,
+        color: isDarkMode ? AppColor.grey.withOpacity(0.3) : AppColor.white,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -109,7 +109,7 @@ class CustomerCard extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 20),
             width: percentWidth(),
-            height: addresses.isEmpty ? 0 : adaptiveHeight(height: 165),
+            height: addresses.isEmpty ? 0 : adaptiveHeight(height: 130),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: addresses.length,

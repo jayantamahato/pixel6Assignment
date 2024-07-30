@@ -15,7 +15,10 @@ class CitySelector extends StatelessWidget {
     return Obx(
       () => DropdownButtonFormField(
         style: customTextStyle(fontSize: 15, weight: FontWeight.normal)
-            .copyWith(color: Colors.black),
+            .copyWith(
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? AppColor.white
+                    : AppColor.black),
         value: _customerController.cityController.text,
         decoration: InputDecoration(
           labelText: AppString.city,

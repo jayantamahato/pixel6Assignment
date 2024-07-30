@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pp/uiHelper/sizes.dart';
 
 import '../../../controller/customer_controller.dart';
 import '../../../core/exports.dart';
@@ -40,10 +41,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 30,
-              width: 30,
-              child: CircularProgressIndicator(),
+            SizedBox(
+              height: adaptiveHeight(height: 30),
+              width: adaptiveWidth(width: 30),
+              child: const CircularProgressIndicator(),
             ),
             whiteSpace(height: 50),
             Text(AppString.checkingUser),

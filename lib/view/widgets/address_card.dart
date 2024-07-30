@@ -31,18 +31,23 @@ class AddressCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         gradient: LinearGradient(
           colors: [
-            AppColor.gradient2.withOpacity(0.1),
-            AppColor.gradient1.withOpacity(0.1)
+            Theme.of(context).brightness == Brightness.dark
+                ? AppColor.gradient2.withOpacity(0.2)
+                : AppColor.gradient2.withOpacity(0.2),
+            Theme.of(context).brightness == Brightness.dark
+                ? AppColor.gradient1.withOpacity(0.2)
+                : AppColor.gradient1.withOpacity(0.2),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
       ),
-      child: Column(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: percentWidth(),
+            width: percentWidth(percent: 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

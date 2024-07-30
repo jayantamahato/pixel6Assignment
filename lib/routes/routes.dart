@@ -7,14 +7,26 @@ import '../view/screens/error/error_screen.dart';
 import '../view/screens/onBoarding/on_boarding.dart';
 
 List<GetPage> appRoutes = [
-  GetPage(name: CustomerScreen.routeName, page: () => const CustomerScreen()),
   GetPage(
-      name: OnboardingScreen.routeName, page: () => const OnboardingScreen()),
-  GetPage(name: CustomersScreen.routeName, page: () => const CustomersScreen()),
+    transition: Transition.rightToLeft,
+    name: CustomerScreen.routeName,
+    page: () => const CustomerScreen(),
+  ),
   GetPage(
-      transition: Transition.rightToLeft,
-      name: AddressScreen.routeName,
-      page: () => const AddressScreen()),
+    transition: Transition.rightToLeft,
+    name: OnboardingScreen.routeName,
+    page: () => const OnboardingScreen(),
+  ),
+  GetPage(
+    transition: Transition.rightToLeft,
+    name: CustomersScreen.routeName,
+    page: () => const CustomersScreen(),
+  ),
+  GetPage(
+    transition: Transition.rightToLeft,
+    name: AddressScreen.routeName,
+    page: () => const AddressScreen(),
+  ),
   GetPage(
     transition: Transition.rightToLeft,
     name: ErrorScreen.routeName,

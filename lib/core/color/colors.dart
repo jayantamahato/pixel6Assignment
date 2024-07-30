@@ -9,7 +9,7 @@ class AppColor {
   static Color grey = const Color(0XFF666666);
   static Color shadow = const Color(0XFFe9e9e9);
   static Color lightScaffold = const Color(0XFFf7f7f7);
-  static Color darkScaffold = const Color(0XFF292929);
+  static Color darkScaffold = const Color(0XFF000000);
   static Color gradient1 = const Color(0XFFff057e);
   static Color gradient2 = const Color(0XFF0522ff);
 }

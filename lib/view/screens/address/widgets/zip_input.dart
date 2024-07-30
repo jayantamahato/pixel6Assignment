@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:pp/uiHelper/exports.dart';
 
 import '../../../../controller/customer_controller.dart';
 import '../../../../core/exports.dart';
@@ -34,8 +35,8 @@ class _PostalInputState extends State<PostalInput> {
           border: const OutlineInputBorder(),
           suffixIcon: isLoading
               ? Container(
-                  height: 10,
-                  width: 10,
+                  height: adaptiveHeight(height: 10),
+                  width: adaptiveWidth(width: 10),
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   child: Center(
@@ -62,8 +63,8 @@ class _PostalInputState extends State<PostalInput> {
             //call api
 
             PostalModel postal = PostalModel(
-                postcode:
-                    kDebugMode ? 411005 : int.parse(widget.controller.text));
+              postcode: kDebugMode ? 411005 : int.parse(widget.controller.text),
+            );
             try {
               setState(() {
                 isLoading = true;

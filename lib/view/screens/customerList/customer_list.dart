@@ -33,18 +33,23 @@ class _CustomersScreenState extends State<CustomersScreen> {
         () => SizedBox(
           height: percentHeight(),
           width: percentWidth(),
-          child: ListView.builder(
-            itemCount: _customerController.customerList.length,
-            itemBuilder: (context, index) => CustomerCard(
-              controller: _customerController,
-              customerIndex: index,
-              name: _customerController.customerList[index].fullName ?? '',
-              email: _customerController.customerList[index].email ?? '',
-              phone: '+91 ${_customerController.customerList[index].phone}',
-              pan: _customerController.customerList[index].panNumber ?? '',
-              addresses: _customerController.customerList[index].address,
-            ),
-          ),
+          child: _customerController.customerList.isNotEmpty
+              ? ListView.builder(
+                  itemCount: _customerController.customerList.length,
+                  itemBuilder: (context, index) => CustomerCard(
+                    controller: _customerController,
+                    customerIndex: index,
+                    name:
+                        _customerController.customerList[index].fullName ?? '',
+                    email: _customerController.customerList[index].email ?? '',
+                    phone:
+                        '+91 ${_customerController.customerList[index].phone}',
+                    pan:
+                        _customerController.customerList[index].panNumber ?? '',
+                    addresses: _customerController.customerList[index].address,
+                  ),
+                )
+              : const Center(child: Text('No customer listed')),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,

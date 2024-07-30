@@ -52,7 +52,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                       decoration: BoxDecoration(
                         color: Theme.of(context).brightness == Brightness.light
                             ? AppColor.white
-                            : AppColor.black,
+                            : AppColor.grey.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -97,7 +97,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 18),
-        height: 60,
+        height: adaptiveHeight(height: 60),
         child: Obx(
           () => SizedBox(
             width: percentWidth(),
