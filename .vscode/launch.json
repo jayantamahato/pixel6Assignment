@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "Flutter (lib/view/widgets/snac_bar.dart)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/view/widgets/snac_bar.dart"
+    }
+  ]
+}
