@@ -98,6 +98,11 @@ class _AddressScreenState extends State<AddressScreen> {
                         onPressed: () async {
                           _customerController.address.length == 10
                               ? Get.snackbar(
+                                  snackStyle: SnackStyle.GROUNDED,
+                                  margin: const EdgeInsets.all(0),
+                                  snackPosition: SnackPosition.BOTTOM,
+                                  backgroundColor: AppColor.primary,
+                                  colorText: AppColor.white,
                                   'Error',
                                   'You already added 10 address',
                                 )
@@ -191,7 +196,14 @@ class _AddressScreenState extends State<AddressScreen> {
 
   Future _saveCustomerInformation() async {
     if (_customerController.address.isEmpty) {
-      Get.snackbar('Error', 'Add address to continue');
+      Get.snackbar(
+          snackStyle: SnackStyle.GROUNDED,
+          margin: const EdgeInsets.all(0),
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: AppColor.primary,
+          colorText: AppColor.white,
+          'Error',
+          'Add address to continue');
       return;
     }
 

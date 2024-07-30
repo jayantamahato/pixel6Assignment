@@ -118,7 +118,14 @@ class CustomerCard extends StatelessWidget {
                   bool res = await controller.deleteCustomerAddress(
                       customerIndex: customerIndex, addressIndex: index);
                   if (!res) {
-                    Get.snackbar('Error', 'Can not delete this address');
+                    Get.snackbar(
+                        snackStyle: SnackStyle.GROUNDED,
+                        margin: const EdgeInsets.all(0),
+                        snackPosition: SnackPosition.BOTTOM,
+                        backgroundColor: AppColor.primary,
+                        colorText: AppColor.white,
+                        'Error',
+                        'Can not delete this address');
                   }
                 },
                 edit: () {

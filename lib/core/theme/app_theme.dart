@@ -10,7 +10,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
           centerTitle: true,
           surfaceTintColor: AppColor.black,
-          backgroundColor: AppColor.black),
+          backgroundColor: AppColor.darkScaffold),
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColor.darkScaffold,
       primaryColor: AppColor.primary,
@@ -20,7 +20,11 @@ class AppTheme {
 //Light Theme
   static light() {
     return ThemeData(
-      appBarTheme: AppBarTheme(surfaceTintColor: AppColor.white),
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        surfaceTintColor: AppColor.white,
+        backgroundColor: AppColor.lightScaffold,
+      ),
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColor.lightScaffold,
       primaryColor: AppColor.primary,
